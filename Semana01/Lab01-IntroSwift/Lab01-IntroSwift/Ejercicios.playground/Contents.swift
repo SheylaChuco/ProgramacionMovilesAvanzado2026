@@ -182,3 +182,82 @@ let notaFinal = 0.30 * notaPa + 0.70 * notaPb
 print("Nota final: \(notaFinal)")
 print("¿Aprueba? \(notaFinal >= 13.0)")
 
+
+
+// ===== EJERCICIO 3: INTERPOLACIÓN =====
+// \(variable) inserta el VALOR de la variable dentro del texto.
+//Docente: Juan León
+
+// --- Ejemplo (ya resuelto): ---
+let fruta = "manzana"
+let cantidad = 5
+let precio = 2.50
+print("Compré \(cantidad) \(fruta)s por S/. \(Double(cantidad) * precio)")
+// Imprime: Compré 5 manzanas por S/. 12.5
+
+// --- TODO 18: Crea tu tarjeta de presentación ---
+let miNombre = "Sheyla"
+let miApellido = "Chuco"
+let miEdad = 22
+let miCarrera = "Diseño y Desarrollo de Software"
+let miCiclo = 5
+let miDistrito = "Santa Anita"
+
+print("Me llamo \(miNombre) \(miApellido), tengo \(miEdad) años.")
+print("Estudio \(miCarrera), ciclo \(miCiclo).")
+print("Vivo en \(miDistrito).")
+
+
+// ===== TODO 19: Completa la factura =====
+//Docente: Juan León
+let prod1 = "Laptop"
+let prec1 = 3500.00
+let cant1 = 1
+
+let prod2 = "Mouse"
+let prec2 = 45.50
+let cant2 = 2
+
+let prod3 = "Teclado"
+let prec3 = 120.00
+let cant3 = 1
+
+// TODO: Calcula el subtotal de cada producto
+let sub1 = prec1 * Double(cant1)
+let sub2 = prec2 * Double(cant2)
+let sub3 = prec3 * Double(cant3)
+
+// TODO: Calcula el subtotal general
+let subtotalGeneral = sub1 + sub2 + sub3
+
+// TODO: Calcula el IGV (18%)
+let igvFactura = subtotalGeneral * 0.18
+
+// TODO: Calcula el total
+let totalFactura = subtotalGeneral + igvFactura
+
+// TODO: Imprime la factura usando interpolación:
+print("==========================")
+print(" FACTURA DE VENTA")
+print("==========================")
+print("\(prod1) x\(cant1) S/. \(sub1)")
+print("\(prod2) x\(cant2) S/. \(sub2)")
+print("\(prod3) x\(cant3) S/. \(sub3)")
+print("--------------------------")
+print("Subtotal: S/. \(subtotalGeneral)")
+print("IGV 18%: S/. \(igvFactura)")
+print("TOTAL: S/. \(totalFactura)")
+print("==========================")
+
+
+// PREDICT 6: ¿Qué imprime cada línea?
+//Docente: Juan León
+let n = "Swift"
+let v = 5
+print("\(n) versión \(v)") // PREDICT 6a: Swift versión 5
+print("\(v) × \(v) = \(v * v)") // PREDICT 6b: 5 × 5 = 25
+print("Hay \(v + 3) alumnos") // PREDICT 6c: Hay 8 alumnos
+
+let p1 = 100.0
+let d = 0.15
+print("Descuento: S/. \(p1 * d)") // PREDICT 6d: Descuento: S/. 15.0
