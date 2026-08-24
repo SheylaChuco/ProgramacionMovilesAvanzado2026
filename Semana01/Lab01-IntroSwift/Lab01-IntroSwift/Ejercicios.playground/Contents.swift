@@ -94,3 +94,91 @@ print(type(of: ciudad)) // String
 // TODO 10: Una variable con el valor false
 let matriculado = false
 print(type(of: matriculado)) // Bool
+
+
+
+
+// ===== EJERCICIO 2: OPERACIONES ARITMÉTICAS =====
+//Docente: Juan León
+let numA = 25
+let numB = 7
+
+// --- Ejemplo (ya resuelto): ---
+let suma = numA + numB
+print("Suma: \(numA) + \(numB) = \(suma)") // 32
+
+// --- TODO 11: Calcula la resta ---
+let resta = numA - numB
+print("Resta: \(numA) - \(numB) = \(resta)")
+
+// --- TODO 12: Calcula la multiplicación ---
+let multiplicacion = numA * numB
+print("Multiplicación: \(numA) x \(numB) = \(multiplicacion)")
+
+// --- TODO 13: Calcula la división entera ---
+let divisionEntera = numA / numB
+print("División entera: \(numA) / \(numB) = \(divisionEntera)")
+
+// --- TODO 14: Calcula el residuo (módulo) ---
+let residuo = numA % numB
+print("Residuo: \(numA) % \(numB) = \(residuo)")
+
+
+// PREDICT 5: ¿Cuál es el resultado de cada operación?
+//Docente: Juan León
+print(10 / 3) // PREDICT 5a: 3
+print(10 % 3) // PREDICT 5b: 1
+print(20 / 7) // PREDICT 5c: 2
+print(20 % 7) // PREDICT 5d: 6
+print(100 / 3) // PREDICT 5e: 33
+print(100 % 3) // PREDICT 5f: 1
+
+
+// ===== FIX: Este código tiene 3 errores en los cálculos =====
+//Docente: Juan León
+
+// Se quiere calcular el promedio de 3 notas:
+let nota1 = 15
+let nota2 = 12
+let nota3 = 18
+// FIX 5: faltaban paréntesis; la división solo aplicaba a nota3 por precedencia de operadores.
+let promedio = (nota1 + nota2 + nota3) / 3
+print("Promedio: \(promedio)")
+
+// Se quiere convertir Fahrenheit a Celsius:
+let fahrenheit = 98.6
+// FIX 6: faltaban paréntesis en (fahrenheit - 32); la multiplicación se ejecutaba antes que la resta.
+let celsius = (fahrenheit - 32) * 5 / 9
+print("Celsius: \(celsius)")
+
+// Se quiere obtener la división con decimales:
+let dividendo = 25.0
+let divisor = 7.0
+// FIX 7: dividendo y divisor eran Int, causando división entera (3). Se cambiaron a Double.
+let resultado = dividendo / divisor
+print("Resultado: \(resultado)")
+
+
+// ===== TODO: Resuelve estos problemas =====
+
+// --- TODO 15: Calcula el IGV (18%) de un producto de S/. 350.00 ---
+let precioProducto = 350.0
+let igv = precioProducto * 0.18
+let precioConIgv = precioProducto + igv
+print("Precio: S/. \(precioProducto)")
+print("IGV: S/. \(igv)")
+print("Total: S/. \(precioConIgv)")
+
+// --- TODO 16: Calcula el área de un círculo con radio 5.0 ---
+let pi = 3.14159
+let radio = 5.0
+let area = pi * radio * radio
+print("Área: \(area)")
+
+// --- TODO 17: Calcula tu nota final del curso ---
+let notaPa = 15.0
+let notaPb = 13.0
+let notaFinal = 0.30 * notaPa + 0.70 * notaPb
+print("Nota final: \(notaFinal)")
+print("¿Aprueba? \(notaFinal >= 13.0)")
+
