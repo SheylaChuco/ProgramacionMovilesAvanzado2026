@@ -261,3 +261,64 @@ print("Hay \(v + 3) alumnos") // PREDICT 6c: Hay 8 alumnos
 let p1 = 100.0
 let d = 0.15
 print("Descuento: S/. \(p1 * d)") // PREDICT 6d: Descuento: S/. 15.0
+
+// ===== TODO 20: Completa las conversiones =====
+//Docente: Juan León
+let enteroConv = 42
+let decimalConv = 9.99
+let textoConv = "150"
+let textoInvalido = "hola"
+
+// TODO: Convierte 'enteroConv' a Double
+let enteroADouble = Double(enteroConv)
+print(enteroADouble) // 42.0
+
+// TODO: Convierte 'decimalConv' a Int
+let decimalAEntero = Int(decimalConv)
+print(decimalAEntero) // PREDICT 7: 9 (Swift trunca los decimales, no redondea)
+
+// TODO: Convierte 'textoConv' a Int
+let textoAEntero = Int(textoConv)
+print(textoAEntero) // PREDICT 8: Optional(150)
+
+// TODO: Convierte 'textoInvalido' a Int
+let invalido = Int(textoInvalido)
+print(invalido) // PREDICT 9: nil (no se puede convertir texto no numérico)
+
+
+// ===== INVESTIGACIÓN =====
+// Busca en la documentación de Apple o en internet (SIN IA):
+//Docente: Juan León
+
+// TODO 21: ¿Cómo se redondea un Double a 2 decimales en Swift?
+// Ejemplo: 3.14159 debería mostrarse como 3.14
+// Pista: busca "String format Swift" o "rounded Swift"
+//
+// Solución: se puede usar String(format:) con el especificador "%.2f":
+let numeroOriginal = 3.14159
+let numeroFormateado = String(format: "%.2f", numeroOriginal)
+print("Redondeado: \(numeroFormateado)")
+// También existe (numero * 100).rounded() / 100 como alternativa sin String(format:)
+//
+// Fuente: documentación de Apple sobre String(format:) y el foro de Swift.org.
+
+
+// TODO 22: ¿Qué hace el operador += en Swift?
+// Investiga y escribe 3 ejemplos de uso.
+// Pista: prueba con var x = 10; x += 5
+//
+// Respuesta: += suma el valor de la derecha a la variable de la izquierda
+// y guarda el resultado en la misma variable. Es un atajo de "x = x + valor".
+
+var ejemploX = 10
+ejemploX += 5
+print("Ejemplo 1: \(ejemploX)") // 15
+
+var contadorVisitas = 0
+contadorVisitas += 1
+contadorVisitas += 1
+print("Ejemplo 2: \(contadorVisitas)") // 2
+
+var saldoCuenta = 100.0
+saldoCuenta += 25.5
+print("Ejemplo 3: \(saldoCuenta)") // 125.5
