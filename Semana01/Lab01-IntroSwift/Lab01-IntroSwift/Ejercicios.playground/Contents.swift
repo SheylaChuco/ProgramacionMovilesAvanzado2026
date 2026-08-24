@@ -89,3 +89,64 @@ let promedioClase = sumaNotas / Double(alumnos.count) // Divide la suma total en
 let promedioTxt = String(format: "%.2f", promedioClase) // Formatea el promedio general a 2 decimales
 
 print("\nPromedio general de la clase: \(promedioTxt)") // Imprime el promedio general al final, con salto de línea antes
+
+
+
+
+
+
+
+
+
+// ===== EJERCICIO 6: CONVERSIONES AVANZADAS (asistido por IA) =====
+// Docente: Juan León
+
+// ========== TEMPERATURA: Celsius ↔ Fahrenheit ↔ Kelvin ==========
+
+let temperaturasCelsius = [0.0, 25.0, 100.0] // Arreglo con 3 temperaturas base en grados Celsius
+
+print("===== CONVERSIÓN DE TEMPERATURA =====") // Imprime encabezado de la sección de temperatura
+
+for celsius in temperaturasCelsius { // Recorre cada temperatura del arreglo, una por una
+    let fahrenheitTemp = celsius * 9 / 5 + 32 // Fórmula: F = C × 9/5 + 32, convierte Celsius a Fahrenheit
+    let kelvinTemp = celsius + 273.15 // Fórmula: K = C + 273.15, convierte Celsius a Kelvin
+
+    let fahrenheitTxt = String(format: "%.2f", fahrenheitTemp) // Formatea Fahrenheit a 2 decimales
+    let kelvinTxt = String(format: "%.2f", kelvinTemp) // Formatea Kelvin a 2 decimales
+
+    print("\(celsius)°C = \(fahrenheitTxt)°F = \(kelvinTxt)K") // Imprime la fila con las 3 escalas de temperatura
+}
+
+
+// ========== DISTANCIA: Kilómetros ↔ Millas ↔ Metros ==========
+
+let distanciasKm = [5.0, 10.0, 42.195] // Arreglo con 3 distancias base en kilómetros (la última es un maratón)
+
+print("\n===== CONVERSIÓN DE DISTANCIA =====") // Imprime encabezado con salto de línea antes
+
+for km in distanciasKm { // Recorre cada distancia del arreglo, una por una
+    let millas = km * 0.621371 // Multiplica km por el factor de conversión para obtener millas
+    let metros = km * 1000 // Multiplica km por 1000 para obtener metros
+
+    let millasTxt = String(format: "%.2f", millas) // Formatea millas a 2 decimales
+    let metrosTxt = String(format: "%.0f", metros) // Formatea metros sin decimales (son enteros)
+
+    print("\(km) km = \(millasTxt) millas = \(metrosTxt) metros") // Imprime la fila con las 3 unidades de distancia
+}
+
+
+// ========== TIEMPO: Horas ↔ Minutos ↔ Segundos ==========
+
+let duracionesHoras = [1.0, 2.5, 8.0] // Arreglo con 3 duraciones base en horas
+
+print("\n===== CONVERSIÓN DE TIEMPO =====") // Imprime encabezado con salto de línea antes
+
+for horas in duracionesHoras { // Recorre cada duración del arreglo, una por una
+    let minutos = horas * 60 // Multiplica horas por 60 para obtener minutos
+    let segundos = horas * 3600 // Multiplica horas por 3600 para obtener segundos
+
+    let minutosTxt = String(format: "%.0f", minutos) // Formatea minutos sin decimales
+    let segundosTxt = String(format: "%.0f", segundos) // Formatea segundos sin decimales
+
+    print("\(horas) horas = \(minutosTxt) minutos = \(segundosTxt) segundos") // Imprime la fila con las 3 unidades de tiempo
+}
